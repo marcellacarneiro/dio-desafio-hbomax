@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap');
+
+* {
+    font-family: 'Raleway', sans-serif;
+    color: var(--text-color);
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #020228;
+    --secondary-color: #ff00e5;
+    --tertiary-color: #b535f6;
+    --btn-bg-color-gradient: linear-gradient(45deg, #9b34ef 0%, #490cb0 20%, transparent 50%);
+    --btn-link-bg-color: #fff;
+    --btn-link-color: #000;
+    --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+    --divider-bg-color: linear-gradient(90deg, #5516ba, #ff00e580 80%);
+    --nav-bg-color: #0000004d;
+    --text-color: #fff;
+    --link-color: #9e86ff;
+    --form-bg-color: #d3d3d30f;
+    --form-field-bg-color: #00000033;
+    --form-field-border: 1px solid #ffffffb3;
+    --form-field-placeholder: #ffffffb3;
+    --form-field-error: #ff4c4c;
+
+    scroll-behavior: smooth;
+}
