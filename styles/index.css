@@ -73,6 +73,12 @@ li::marker {
     background-color: var(--tertiary-color);
     padding: 0.5rem 1.65rem;
     border-radius: 20px;
+    transition: background 1s, color 1s;
+}
+
+.menu__subscribe-btn:hover {
+    background-color: var(--btn-link-bg-color);
+    color: var(--btn-link-color);
 }
 
 .header {
@@ -231,7 +237,8 @@ li::marker {
 }
 
 .container {
-    padding: 0 1.5rem;
+    max-width: 1200px;
+    padding: 1.5rem;
     margin: auto;
     text-align: center;
 }
@@ -275,13 +282,13 @@ li::marker {
     margin-bottom: 0.5rem;
 }
 
-/* .subscription__plans:has(.subscription__card:nth-child(1):hover) .subscription__card:nth-child(2) {
+.subscription__plans:has(.subscription__card:nth-child(1):hover) .subscription__card:nth-child(2) {
     transform: rotateY(-45deg);
 }
 
 .subscription__plans:has(.subscription__card:nth-child(2):hover) .subscription__card:nth-child(1) {
     transform: rotateY(45deg);
-} */
+}
 
 /* contents */
 
@@ -294,14 +301,16 @@ li::marker {
     grid-template-columns: repeat(6, 100%);
     overflow: auto hidden;
     gap: 2rem;
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
 }
 
 .contents__card {
+    width: 100%;
     border-radius: 1rem;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    border: 2px solid transparent;
 }
 
 .contents__card img {
@@ -322,6 +331,11 @@ li::marker {
     letter-spacing: 2px;
     font-weight: bold;
     font-family: 'Raleway', sans-serif;
+    transition: color 0.5s;
+}
+
+.footer__link:hover {
+    color: var(--text-color);
 }
 
 .footer > p {
@@ -336,4 +350,103 @@ li::marker {
     justify-content: center;
     gap: 2.5rem;
     margin-top: 5rem;
+}
+
+@media screen and (min-width: 480px) {
+    .menu {
+        flex-direction: row;
+        padding: 1rem;
+    }
+
+    .menu__logo {
+        width: 160px;
+    }
+
+    .header {
+        padding-top: 120px;
+    }
+
+    .contents__container {
+        grid-template-columns: repeat(2, 1fr);
+        overflow: initial;
+    }
+
+    .contents__card {
+        transition: transform 0.8s, background 0.8s, border 1s;
+    }
+
+    .contents__card img {
+        transition: opacity 2s;
+    }
+
+    .contents__card:hover {
+        transform: scale(1.05);
+        border: 2px solid var(--tertiary-color);
+    }
+
+    .contents__card:hover img {
+        opacity: 0;
+    }
+
+    .contents__card:nth-child(1):hover {
+        background-image: url('../images/hbo-hover_0.webp');
+    }
+
+    /* Max Originals Content */
+
+    .contents__card:nth-child(2):hover {
+        background-image: url('../images/MAX-Hover.webp');
+    }
+
+    /* DC Content */
+
+    .contents__card:nth-child(3):hover {
+        background-image: url('../images/DC-Hover.webp');
+    }
+
+    /* WB Content */
+
+    .contents__card:nth-child(4):hover {
+        background-image: url('../images/WB-Hover.webp');
+    }
+
+    /* CN Content */
+
+    .contents__card:nth-child(5):hover {
+        background-image: url('../images/CN-Hover.png');
+    }
+
+    /* Champions League Content */
+
+    .contents__card:nth-child(6):hover {
+        background-image: url('../images/UCL-Hover.webp');
+    }
+
+    .footer__link {
+        display: inline;
+        margin: 0 1rem;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .contents__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1140px) {
+    .subscription__plans {
+        flex-direction: row;
+    }
+}
+
+@media (pointer: coarse) {
+    .contents__card:hover {
+        transform: none;
+    }
+
+    .subscription__plans:has(.subscription__card:nth-child(1):hover) .subscription__card:nth-child(2),
+    .subscription__plans:has(.subscription__card:nth-child(2):hover) .subscription__card:nth-child(1) {
+        transform: none;
+    }
 }
