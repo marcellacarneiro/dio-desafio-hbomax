@@ -1,86 +1,5 @@
 @import url('./default.css');
 
-h1,
-button {
-    text-transform: uppercase;
-}
-
-button {
-    font-weight: bold;
-    cursor: pointer;
-}
-
-p {
-    font-family: 'Quicksand', sans-serif;
-}
-
-ul {
-    padding: 0;
-}
-
-li {
-    list-style: none;
-    padding-left: 1rem;
-    font-size: 1.25rem;
-    max-width: 420px;
-}
-
-li::marker {
-    content: '+';
-    font-size: 2rem;
-}
-
-.text--small {
-    font-size: 1rem;
-    font-weight: lighter;
-}
-
-.menu {
-    display: flex;
-    z-index: 1;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--nav-bg-color);
-    position: fixed;
-    width: 100%;
-    gap: 24px;
-    padding: 2rem 1.5rem;
-}
-
-.menu__logo {
-    width: 100px;
-}
-
-.menu div {
-    display: flex;
-    gap: 1rem;
-}
-
-.menu__signin-btn,
-.menu__subscribe-btn {
-    border: none;
-    letter-spacing: 1.5px;
-    font-size: 0.8rem;
-}
-
-.menu__signin-btn {
-    background: none;
-}
-
-.menu__subscribe-btn {
-    border: none;
-    background-color: var(--tertiary-color);
-    padding: 0.5rem 1.65rem;
-    border-radius: 20px;
-    transition: background 1s, color 1s;
-}
-
-.menu__subscribe-btn:hover {
-    background-color: var(--btn-link-bg-color);
-    color: var(--btn-link-color);
-}
-
 .header {
     padding: 180px 0 300px;
     position: relative;
@@ -97,6 +16,7 @@ li::marker {
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
@@ -180,26 +100,6 @@ li::marker {
     }
 }
 
-.btn--gradient {
-    color: var(--text-color);
-    background: var(--btn-bg-color-gradient);
-    border: none;
-    outline: 3px solid transparent;
-    border-radius: 30px;
-    letter-spacing: 4px;
-    font-size: 1rem;
-    background-size: 250%;
-    padding: 1rem 2.5rem;
-    transition: background 1s, outline 1s, transform 1s ease-in-out;
-}
-
-.btn--gradient:hover {
-    background-color: transparent;
-    background-position: 100%;
-    outline: 2px solid var(--secondary-color);
-    transform: scale(1.05);
-}
-
 .main__subscribe-btn + p {
     text-align: center;
     max-width: 250px;
@@ -231,16 +131,9 @@ li::marker {
 
 .subscription {
     width: 100%;
-    background-image: url('https://github.com/micheleambrosio/hbomax/blob/master/assets/images/background-movies-series.png?raw=true');
+    background-image: url('../images/background-movies-series.png');
     background-size: cover;
     position: relative;
-}
-
-.container {
-    max-width: 1200px;
-    padding: 1.5rem;
-    margin: auto;
-    text-align: center;
 }
 
 .subscription__plans {
@@ -321,47 +214,8 @@ li::marker {
 
 /* footer */
 
-.footer__link {
-    display: block;
-    margin-bottom: 1rem;
-    color: var(--link-color);
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 0.875rem;
-    letter-spacing: 2px;
-    font-weight: bold;
-    font-family: 'Raleway', sans-serif;
-    transition: color 0.5s;
-}
-
-.footer__link:hover {
-    color: var(--text-color);
-}
-
-.footer > p {
-    font-size: 0.75rem;
-    margin: 1rem 0;
-    color: var(--link-color);
-}
-
-.footer__social-media {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2.5rem;
-    margin-top: 5rem;
-}
 
 @media screen and (min-width: 480px) {
-    .menu {
-        flex-direction: row;
-        padding: 1rem;
-    }
-
-    .menu__logo {
-        width: 160px;
-    }
-
     .header {
         padding-top: 120px;
     }
@@ -420,11 +274,6 @@ li::marker {
 
     .contents__card:nth-child(6):hover {
         background-image: url('../images/UCL-Hover.webp');
-    }
-
-    .footer__link {
-        display: inline;
-        margin: 0 1rem;
     }
 }
 

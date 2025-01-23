@@ -1,0 +1,71 @@
+@import url('./default.css');
+
+body {
+    background-image: url('../images/background-movies-series.png');
+    background-size: cover;
+    height: 100vh;
+}
+
+.menu {
+    position: static;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+    padding: 1.5rem;
+}
+
+.login {
+    width: 100%;
+    max-width: 800px;
+    background-color: var(--form-bg-color);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2.5rem;
+}
+
+.login__title {
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+}
+
+.login label {
+    text-align: left;
+}
+
+.login input {
+    background: var(--form-field-bg-color);
+    border: var(--form-field-border);
+    border-radius: 0.5rem;
+    color: var(--text-color);
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.login__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.login__link {
+    color: var(--link-color);
+    text-decoration: none;
+    /* margin-left: 24px; */
+    font-weight: bold;
+}
+
+@media screen and (min-width: 480px) {
+    .login__actions {
+        flex-direction: row;
+    }
+}
